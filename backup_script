@@ -1,0 +1,315 @@
+"""
+build_docs.py
+
+Refactored:
+- input templates: ./docs/input
+- generated docs: ./docs/output
+- archive applies to output files
+"""
+
+import yaml
+import json
+import re
+import argparse
+import difflib
+from pathlib import Path
+import sys
+import shutil
+from datetime import datetime
+import hashlib
+
+# ------------------------
+# CONFIGURATION
+# ------------------------
+
+INPUT_YAML = Path("terms.yaml")
+OUTPUT_JSON = Path("terms.json")
+
+DOCS_INPUT_DIR = Path("./docs/input")
+DOCS_OUTPUT_DIR = Path("./docs/output")
+
+ARCHIVE_DIR = Path("./archive")
+CACHE_FILE = Path(".build_cache.json")
+
+PATTERN = r"\{\{term:([a-zA-Z0-9_\.]+)\}\}"
+
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+CYAN = "\033[96m"
+RESET = "\033[0m"
+
+REQUIRED_FIELDS = ["label", "definition"]
+
+# ------------------------
+# SCHEMA VALIDATION
+# ------------------------
+
+def validate_schema(data):
+    errors = []
+
+    if "terms" not in data:
+        return ["Missing top-level key: 'terms'"]
+
+    for key, term in data["terms"].items():
+        for field in REQUIRED_FIELDS:
+            if field not in term:
+                errors.append(f"Term '{key}' missing '{field}'")
+
+    return errors
+
+# ------------------------
+# IO
+# ------------------------
+
+def load_yaml():
+    return yaml.safe_load(INPUT_YAML.read_text())
+
+def save_json(data):
+    OUTPUT_JSON.write_text(json.dumps(data, indent=2))
+
+# ------------------------
+# HASHING / CACHE
+# ------------------------
+
+def file_hash(path):
+    return hashlib.md5(path.read_bytes()).hexdigest()
+
+def load_cache():
+    if CACHE_FILE.exists():
+        return json.loads(CACHE_FILE.read_text())
+    return {}
+
+def save_cache(cache):
+    CACHE_FILE.write_text(json.dumps(cache, indent=2))
+
+# ------------------------
+# ARCHIVE (OUTPUT FILES)
+# ------------------------
+
+def archive_file(path):
+    ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+
+    relative = path.relative_to(DOCS_OUTPUT_DIR)
+
+    timestamp = datetime.fromtimestamp(path.stat().st_mtime)\
+        .strftime("%Y%m%d_%H%M%S_%f")
+
+    target_dir = ARCHIVE_DIR / relative.parent
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    target_file = target_dir / f"{timestamp}_{path.name}"
+
+    # skip identical content
+    if target_file.exists() and file_hash(path) == file_hash(target_file):
+        return
+
+    shutil.copy2(path, target_file)
+
+# ------------------------
+# RESTORE (OUTPUT FILES)
+# ------------------------
+
+def restore_file(target):
+    target = Path(target)
+
+    if not target.exists():
+        print(f"{RED}File does not exist: {target}{RESET}")
+        sys.exit(1)
+
+    relative = target.relative_to(DOCS_OUTPUT_DIR)
+    archive_dir = ARCHIVE_DIR / relative.parent
+
+    versions = sorted(archive_dir.glob(f"*_{target.name}"))
+
+    if not versions:
+        print(f"{RED}No archive found{RESET}")
+        sys.exit(1)
+
+    latest = versions[-1]
+    shutil.copy2(latest, target)
+
+    print(f"{GREEN}Restored:{RESET} {target} <- {latest}")
+
+def list_versions(target):
+    target = Path(target)
+
+    relative = target.relative_to(DOCS_OUTPUT_DIR)
+    archive_dir = ARCHIVE_DIR / relative.parent
+
+    versions = sorted(archive_dir.glob(f"*_{target.name}"))
+
+    if not versions:
+        print(f"{YELLOW}No versions found{RESET}")
+        return
+
+    print(f"\n{CYAN}Versions for {target}:{RESET}\n")
+
+    for i, v in enumerate(versions):
+        print(f"[{i}] {v.name}")
+
+# ------------------------
+# TERM REPLACEMENT
+# ------------------------
+
+def resolve_term(key, terms, errors):
+    if "." in key:
+        term, attr = key.split(".", 1)
+        if term not in terms:
+            errors.add(term)
+            return f"[UNKNOWN:{key}]"
+        return terms[term].get(attr, f"[MISSING:{key}]")
+
+    if key not in terms:
+        errors.add(key)
+        return f"[UNKNOWN:{key}]"
+
+    return terms[key]["label"]
+
+def replace_terms(text, terms, errors):
+    return re.sub(
+        PATTERN,
+        lambda m: resolve_term(m.group(1), terms, errors),
+        text
+    )
+
+# ------------------------
+# DIFF
+# ------------------------
+
+def color_diff(lines):
+    out = []
+    for l in lines:
+        if l.startswith("+") and not l.startswith("+++"):
+            out.append(GREEN + l + RESET)
+        elif l.startswith("-") and not l.startswith("---"):
+            out.append(RED + l + RESET)
+        else:
+            out.append(l)
+    return "\n".join(out)
+
+# ------------------------
+# PROCESSING
+# ------------------------
+
+def process_file(input_path, output_path, terms, cache, terms_changed, dry_run=False):
+    errors = set()
+
+    input_hash = file_hash(input_path)
+    cached_hash = cache.get(str(input_path))
+
+    # incremental skip
+    if not terms_changed and input_hash == cached_hash:
+        return errors
+
+    original = input_path.read_text()
+    updated = replace_terms(original, terms, errors)
+
+    if not dry_run:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing = output_path.read_text() if output_path.exists() else None
+
+    # 🔥 key fix: force rebuild when terms changed
+    if terms_changed or existing != updated:
+        if dry_run:
+            print(f"\n--- {output_path} (DRY RUN) ---")
+        else:
+            if output_path.exists():
+                archive_file(output_path)
+
+            output_path.write_text(updated)
+            print(f"Built: {output_path}")
+
+    cache[str(input_path)] = input_hash
+    return errors
+
+def process_docs(terms, cache, terms_changed, dry_run=False):
+    all_errors = set()
+
+    for input_file in DOCS_INPUT_DIR.rglob("*"):
+        if input_file.suffix not in [".md", ".svg"]:
+            continue
+
+        relative = input_file.relative_to(DOCS_INPUT_DIR)
+        output_file = DOCS_OUTPUT_DIR / relative
+
+        errors = process_file(
+            input_file,
+            output_file,
+            terms,
+            cache,
+            terms_changed,
+            dry_run
+        )
+
+        all_errors.update(errors)
+
+    return all_errors
+
+# ------------------------
+# MAIN
+# ------------------------
+
+def main():
+    parser = argparse.ArgumentParser(description="Documentation build system")
+
+    parser.add_argument("--force", "-f", action="store_true")
+    parser.add_argument("--dry-run", "-dr", action="store_true")
+    parser.add_argument("--restore", "-r", type=str)
+    parser.add_argument("--multi-version-restore", "-R", type=str)
+
+    args = parser.parse_args()
+
+    if args.restore:
+        restore_file(args.restore)
+        return
+
+    if args.multi_version_restore:
+        list_versions(args.multi_version_restore)
+        return
+
+    strict = not args.force
+
+    data = load_yaml()
+
+    schema_errors = validate_schema(data)
+    if schema_errors:
+        print(f"{RED}Schema validation failed:{RESET}")
+        for e in schema_errors:
+            print(f"{RED}- {e}{RESET}")
+        sys.exit(1)
+
+    save_json(data)
+
+    terms = data.get("terms", {})
+
+    cache = load_cache()
+    terms_hash = file_hash(INPUT_YAML)
+    terms_changed = cache.get("_terms_hash") != terms_hash
+
+    if terms_changed:
+        print(f"{CYAN}Terms changed → full rebuild{RESET}")
+
+    errors = process_docs(terms, cache, terms_changed, args.dry_run)
+
+    cache["_terms_hash"] = terms_hash
+    save_cache(cache)
+
+    if errors:
+        print(f"\n{YELLOW}Unknown terms detected:{RESET}")
+        for e in sorted(errors):
+            print(f"{YELLOW}- {e}{RESET}")
+
+        if strict:
+            print(f"{RED}Build failed{RESET}")
+            sys.exit(1)
+
+    print(f"\n{GREEN}Done{RESET}")
+
+# ------------------------
+# ENTRYPOINT
+# ------------------------
+
+if __name__ == "__main__":
+    main()

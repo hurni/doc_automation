@@ -1,0 +1,16 @@
+# Example Documentation
+
+The {{dataSteward.aliases}} checks the quality of {{data.definition}}.
+
+## Definition
+{{data.label}}: {{data.definition}}
+
+## Related
+An {{dataOwner.label}} is often but not always the direct superior of the {{dataSteward.label}}.
+
+
+## Test
+Running {{test.label}}: {{test.definition}} was successfull. Results for
+- {{dataSteward}}
+- dataOwner.related is {{dataOwner.definition}}
+- {{test.label}}

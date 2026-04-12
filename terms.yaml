@@ -1,0 +1,57 @@
+terms:
+  data:
+    label: Data
+    definition: Normalized Information bits
+    aliases: Daten
+    related:
+      - dataCustodian
+      - dataSteward
+      - dataOwner
+
+  validation:
+    label: Validation
+    definition: Ensure the meaning according to the business glossary or quality standards (fit-for-purpuse) are met
+    aliases: Validierung
+    related:
+      - dataCustodian
+      - dataSteward
+      - dataOwner
+
+  dataOwner:
+    label: Data Owner
+    definition: The person responsible on the strategic level
+    aliases:
+      - Dateneigner
+    related:
+      - dataCustodian
+      - dataSteward
+    processes:
+      - validation
+
+  dataCustodian:
+    label: Data Custodian
+    definition: A person (or organization) responsible for the IT systems containing the data and who fedges data from the data base
+    aliases:
+      - Datenhalter
+    related:
+      - dataOwner
+      - dataSteward
+
+  dataSteward:
+    label: Data Steward
+    definition: A Person responsible for the datas meaning and its metadata
+    aliases:
+      - Datenverwalter
+    related:
+      - dataCustodian
+      - dataOwner
+
+  test:
+    label: Test
+    definition: This is a testcase
+    related:
+      - dataCustodian
+      - dataSteward
+      - dataOwner
+
+
