@@ -59,9 +59,7 @@ Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt
 
 #### Aufgaben
 - {'Definiert gemeinsam mit Fachbereichen': ['Datenanforderungen', 'Qualitätskriterien']}
-- {'Pflegt': None}
-  - Metadaten (Data Catalog)
-  - Business Glossary
+- {'Pflegt': ['Metadaten (Data Catalog)', 'Business Glossary']}
 - Überwacht und verbessert die Datenqualität
 - Koordiniert die Bereitstellung von Daten (inkl. OGD)
 - Analysiert und behebt Qualitätsprobleme (möglichst an der Quelle)

@@ -41,15 +41,10 @@ Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitun
 - Stellt Ressourcen (Budget, Personal) bereit
 
 #### Kompetenzen
-- Priorisierung von Datenprojekten
-- Freigabe kritischer Datennutzungen (z. B. OGD, Datenaustausch)
-- Festlegung von Schutzbedarf und Risikoniveau
-- Eskalationsentscheid bei Konflikten
+Priorisierung von Datenprojekten, Freigabe kritischer Datennutzungen (z. B. OGD, Datenaustausch), Festlegung von Schutzbedarf und Risikoniveau, Eskalationsentscheid bei Konflikten
 
 #### Verantwortung
-- Rechtliche Compliance sicherstellen (z. B. Datenschutz, Fachgesetze)
-- Definition Schutzbedarf und Risikomitigierung der Daten
-- Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen
+Rechtliche Compliance sicherstellen (z. B. Datenschutz, Fachgesetze), Definition Schutzbedarf und Risikomitigierung der Daten, Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen
 
 ### 2.2 👩‍💼💡 Datenverwalter (Data Steward)
 > ⚠️ Der 👩‍💼💡 Datenverwalter (Data Steward) sorgt dafür, dass Daten richtig verstanden und richtig genutzt werden.
@@ -58,26 +53,13 @@ Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitun
 Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verständlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.
 
 #### Aufgaben
-- {'Definiert gemeinsam mit Fachbereichen': ['Datenanforderungen', 'Qualitätskriterien']}
-- {'Pflegt': None}
-  - Metadaten (Data Catalog)
-  - Business Glossary
-- Überwacht und verbessert die Datenqualität
-- Koordiniert die Bereitstellung von Daten (inkl. OGD)
-- Analysiert und behebt Qualitätsprobleme (möglichst an der Quelle)
-
-
+{'Definiert gemeinsam mit Fachbereichen': ['Datenanforderungen', 'Qualitätskriterien']}, {'Pflegt': ['Metadaten (Data Catalog)', 'Business Glossary']}, Überwacht und verbessert die Datenqualität, Koordiniert die Bereitstellung von Daten (inkl. OGD), Analysiert und behebt Qualitätsprobleme (möglichst an der Quelle)
 
 #### Kompetenzen
-- Korrigiert operative Datenfehler
-- Definiert Qualitätsregeln und Standards (mit Unterstützung)
-- Entscheidet über kleinere Anpassungen in Prozessen
+Korrigiert operative Datenfehler, Definiert Qualitätsregeln und Standards (mit Unterstützung), Entscheidet über kleinere Anpassungen in Prozessen
 
 #### Verantwortung
-- Datenqualität (Accuracy, Completeness, Consistency)
-- Dokumentation & Transparenz
-- Semantische Klarheit (einheitliche Begriffe)
-- Einhaltung der Governance im Alltag
+Datenqualität (Accuracy, Completeness, Consistency), Dokumentation & Transparenz, Semantische Klarheit (einheitliche Begriffe), Einhaltung der Governance im Alltag
 
 ### 2.1 🕵🏻⚙️ Datenhalter (Data Custodian)
 > ⚠️ Der 🕵🏻⚙️ Datenhalter (Data Custodian) sorgt dafür, dass Daten sicher und zuverlässig gespeichert und extrahiert werden.
@@ -86,26 +68,12 @@ Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt
 Der 🕵🏻⚙️ Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verfügbar, sicher und performant sind. Wo die 🕵🏻⚙️ Datenhalter (Data Custodian) angesiedelt sind, hängt von den jeweiligen Daten ab. Diese können im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.
 
 #### Aufgaben
-- {'Betrieb von': None}
-  - Datenbanken
-  - Schnittstellen
-- Infrastruktur (On-Prem / Cloud)
-- {'Umsetzung von': None}
-  - Zugriffskontrollen
-  - Verschlüsselung
-- Backup & Recovery
-- Monitoring und Performance-Optimierung
-- Incident Management (z. B. Sicherheitsvorfälle)
+{'Betrieb von': ['Datenbanken', 'Schnittstellen']}, Infrastruktur (On-Prem / Cloud), {'Umsetzung von': ['Zugriffskontrollen', 'Verschlüsselung']}, Backup & Recovery, Monitoring und Performance-Optimierung, Incident Management (z. B. Sicherheitsvorfälle)
 
 #### Kompetenzen
-- Technische Umsetzung von Sicherheits- und Betriebsmassnahmen
-- Sofortmassnahmen bei Sicherheitsvorfällen
-- Optimierung der Infrastruktur
+Technische Umsetzung von Sicherheits- und Betriebsmassnahmen, Sofortmassnahmen bei Sicherheitsvorfällen, Optimierung der Infrastruktur
 
 #### Verantwortung
-- Verfügbarkeit
-- Integrität
-- Sicherheit (Confidentiality)
-- Nachvollziehbarkeit (Logging, Traceability)
+Verfügbarkeit, Integrität, Sicherheit (Confidentiality), Nachvollziehbarkeit (Logging, Traceability)
 
 ...

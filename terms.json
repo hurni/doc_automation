@@ -64,18 +64,20 @@
       ],
       "responsibility": [
         {
-          "Betrieb von": [
-            "Datenbanken",
-            "Schnittstellen"
-          ]
+          "Betrieb von": null
         },
+        [
+          "Datenbanken",
+          "Schnittstellen"
+        ],
         "Infrastruktur (On-Prem / Cloud)",
         {
-          "Umsetzung von": [
-            "Zugriffskontrollen",
-            "Verschl\u00fcsselung"
-          ]
+          "Umsetzung von": null
         },
+        [
+          "Zugriffskontrollen",
+          "Verschl\u00fcsselung"
+        ],
         "Backup & Recovery",
         "Monitoring und Performance-Optimierung",
         "Incident Management (z. B. Sicherheitsvorf\u00e4lle)"
@@ -113,11 +115,12 @@
           ]
         },
         {
-          "Pflegt": [
-            "Metadaten (Data Catalog)",
-            "Business Glossary"
-          ]
+          "Pflegt": null
         },
+        [
+          "Metadaten (Data Catalog)",
+          "Business Glossary"
+        ],
         "\u00dcberwacht und verbessert die Datenqualit\u00e4t",
         "Koordiniert die Bereitstellung von Daten (inkl. OGD)",
         "Analysiert und behebt Qualit\u00e4tsprobleme (m\u00f6glichst an der Quelle)"

@@ -52,6 +52,8 @@ AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/w
 #### Aufgaben
 {{dataSteward.responsibility}}
 
+
+
 #### Kompetenzen
 {{dataSteward.authority}}
 

@@ -58,10 +58,8 @@ Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitun
 Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verständlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.
 
 #### Aufgaben
-- {'Definiert gemeinsam mit Fachbereichen': ['Datenanforderungen', 'Qualitätskriterien']}
-- {'Pflegt': None}
-  - Metadaten (Data Catalog)
-  - Business Glossary
+- Definiert gemeinsam mit Fachbereichen - Datenanforderungen - Qualitätskriterien
+- Pflegt - Metadaten (Data Catalog) - Business Glossary
 - Überwacht und verbessert die Datenqualität
 - Koordiniert die Bereitstellung von Daten (inkl. OGD)
 - Analysiert und behebt Qualitätsprobleme (möglichst an der Quelle)

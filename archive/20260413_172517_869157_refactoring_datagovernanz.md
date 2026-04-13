@@ -59,9 +59,7 @@ Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt
 
 #### Aufgaben
 - {'Definiert gemeinsam mit Fachbereichen': ['Datenanforderungen', 'Qualitätskriterien']}
-- {'Pflegt': None}
-  - Metadaten (Data Catalog)
-  - Business Glossary
+- {'Pflegt': ['Metadaten (Data Catalog)', 'Business Glossary']}
 - Überwacht und verbessert die Datenqualität
 - Koordiniert die Bereitstellung von Daten (inkl. OGD)
 - Analysiert und behebt Qualitätsprobleme (möglichst an der Quelle)
@@ -86,13 +84,9 @@ Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt
 Der 🕵🏻⚙️ Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verfügbar, sicher und performant sind. Wo die 🕵🏻⚙️ Datenhalter (Data Custodian) angesiedelt sind, hängt von den jeweiligen Daten ab. Diese können im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.
 
 #### Aufgaben
-- {'Betrieb von': None}
-  - Datenbanken
-  - Schnittstellen
+- {'Betrieb von': ['Datenbanken', 'Schnittstellen']}
 - Infrastruktur (On-Prem / Cloud)
-- {'Umsetzung von': None}
-  - Zugriffskontrollen
-  - Verschlüsselung
+- {'Umsetzung von': ['Zugriffskontrollen', 'Verschlüsselung']}
 - Backup & Recovery
 - Monitoring und Performance-Optimierung
 - Incident Management (z. B. Sicherheitsvorfälle)
