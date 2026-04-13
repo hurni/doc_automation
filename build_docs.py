@@ -180,6 +180,23 @@ def resolve_path(path, terms, errors, local_ctx=None):
     return value
 
 
+# ✅ NEW: recursive list renderer
+def render_list(value, terms, errors, indent=0):
+    lines = []
+    prefix = "  " * indent + "- "
+
+    for item in value:
+        if isinstance(item, list):
+            # recurse into nested list
+            lines.extend(render_list(item, terms, errors, indent + 1))
+        else:
+            if isinstance(item, str) and item in terms:
+                item = make_link(item, terms)
+            lines.append(prefix + str(item))
+
+    return lines
+
+
 def replace_variables(text, terms, errors, local_ctx=None):
     def repl(match):
         path = match.group(1)
@@ -188,14 +205,9 @@ def replace_variables(text, terms, errors, local_ctx=None):
         if value is None:
             return f"[UNKNOWN:{path}]"
 
+        # ✅ UPDATED: use recursive rendering
         if isinstance(value, list):
-            rendered = []
-            for item in value:
-                if isinstance(item, str) and item in terms:
-                    rendered.append(make_link(item, terms))
-                else:
-                    rendered.append(str(item))
-            return ", ".join(rendered)
+            return "\n".join(render_list(value, terms, errors))
 
         if isinstance(value, str) and value in terms:
             return make_link(value, terms)
@@ -275,14 +287,12 @@ def process_file(
 
     cache_entry = cache.get(str(input_path), {})
 
-    # backward compatibility
     if isinstance(cache_entry, str):
         cache_entry = {
             "input_hash": cache_entry,
             "terms_hash": None
         }
 
-    # incremental build check
     if (
         not force
         and cache_entry.get("input_hash") == input_hash
@@ -313,7 +323,6 @@ def process_file(
             output_path.write_text(updated)
             print(f"Built: {output_path}")
 
-    # update cache
     cache[str(input_path)] = {
         "input_hash": input_hash,
         "terms_hash": terms_hash
