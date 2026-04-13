@@ -183,15 +183,34 @@ def resolve_path(path, terms, errors, local_ctx=None):
 # ✅ NEW: recursive list renderer
 def render_list(value, terms, errors, indent=0):
     lines = []
-    prefix = "  " * indent + "- "
 
     for item in value:
-        if isinstance(item, list):
-            # recurse into nested list
+        prefix = "  " * indent + "- "
+
+        # ✅ Case 1: dictionary (key + nested list)
+        if isinstance(item, dict):
+            for key, sub in item.items():
+                # render the parent bullet
+                if isinstance(key, str) and key in terms:
+                    key = make_link(key, terms)
+
+                lines.append(prefix + str(key))
+
+                # render children
+                if isinstance(sub, list):
+                    lines.extend(render_list(sub, terms, errors, indent + 1))
+                elif sub is not None:
+                    lines.append("  " * (indent + 1) + "- " + str(sub))
+
+        # ✅ Case 2: nested list directly
+        elif isinstance(item, list):
             lines.extend(render_list(item, terms, errors, indent + 1))
+
+        # ✅ Case 3: simple value
         else:
             if isinstance(item, str) and item in terms:
                 item = make_link(item, terms)
+
             lines.append(prefix + str(item))
 
     return lines
