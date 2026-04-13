@@ -1,9 +1,9 @@
 {
   "terms": {
     "data": {
-      "label": "Data",
-      "definition": "Normalized Information bits",
-      "aliases": "Daten",
+      "label": "Daten",
+      "definition": "Strukturierte oder unstrukturierte Fakten, Messwerte oder Beobachtungen, die als Grundlage von Entscheidugnen oder Analysen dienen. Grunds\u00e4tzlich sind drei Arten von Daten (numerische Daten wie  Messwerte, kategoriale Daten wie Beschreibungen und Metadaten (Daten \u00fcber Daten)) zu unterscheiden.",
+      "slogan": "Daten sind eine strategische Ressource des BLW",
       "related": [
         "dataCustodian",
         "dataSteward",
@@ -11,50 +11,130 @@
       ]
     },
     "validation": {
-      "label": "Validation",
-      "definition": "Ensure the meaning according to the business glossary or quality standards (fit-for-purpuse) are met",
-      "aliases": "Validierung",
+      "label": "Validierung",
+      "definition": "Pr\u00fcfung, ob die Bedeutung gem\u00e4ss fachlicher Termini (Glossar) oder ob die definiterten Qualit\u00e4tstandards (fit-for-purpuse) eingehalten wurden.",
       "related": [
         "dataCustodian",
         "dataSteward",
-        "dataOwner"
+        "dataOwner",
+        "data"
       ]
     },
     "dataOwner": {
-      "label": "Data Owner",
-      "definition": "The person responsible on the strategic level",
+      "label": "\ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner)",
+      "slogan": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) tr\u00e4gt die accountability \u2013 auch wenn er nicht operativ arbeitet.",
+      "definition": "Der \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) ist Mitglied der Gesch\u00e4ftsleitung und tr\u00e4gt die Gesamtaccountability f\u00fcr die Daten seines Bereichs. Er entscheidet, wof\u00fcr Daten genutzt werden d\u00fcrfen, wie wichtig sie sind und welche Risiken akzeptiert werden.",
       "aliases": [
-        "Dateneigner"
+        "Data Owner"
       ],
       "related": [
         "dataCustodian",
         "dataSteward"
       ],
-      "processes": [
-        "validation"
-      ]
+      "responsibility": [
+        "Definiert die strategisch relevanten Daten und priorisiert Dateninitiativen",
+        "Genehmigt Nutzung, Weitergabe und Ver\u00f6ffentlichung von Daten",
+        "Initiiert Programme zur Qualit\u00e4tsverbesserung",
+        "Stellt Ressourcen (Budget, Personal) bereit"
+      ],
+      "authority": [
+        "Priorisierung von Datenprojekten",
+        "Freigabe kritischer Datennutzungen (z. B. OGD, Datenaustausch)",
+        "Festlegung von Schutzbedarf und Risikoniveau",
+        "Eskalationsentscheid bei Konflikten"
+      ],
+      "accountability": [
+        "Rechtliche Compliance sicherstellen (z. B. Datenschutz, Fachgesetze)",
+        "Definition Schutzbedarf und Risikomitigierung der Daten",
+        "Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen"
+      ],
+      "focus": "F\u00fchrungsaccountability tragen",
+      "expertise": "Strategisch"
     },
     "dataCustodian": {
-      "label": "Data Custodian",
-      "definition": "A person (or organization) responsible for the IT systems containing the data and who fedges data from the data base",
+      "label": "\ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian)",
+      "definition": "Der \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verf\u00fcgbar, sicher und performant sind. Wo die \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) angesiedelt sind, h\u00e4ngt von den jeweiligen Daten ab. Diese k\u00f6nnen im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.",
+      "slogan": "Der \ud83d\udd75\ud83c\udffb\u2699\ufe0f Datenhalter (Data Custodian) sorgt daf\u00fcr, dass Daten sicher und zuverl\u00e4ssig gespeichert und extrahiert werden.",
       "aliases": [
-        "Datenhalter"
+        "Data Custodian"
       ],
       "related": [
         "dataOwner",
         "dataSteward"
-      ]
+      ],
+      "responsibility": [
+        {
+          "Betrieb von": [
+            "Datenbanken",
+            "Schnittstellen"
+          ]
+        },
+        "Infrastruktur (On-Prem / Cloud)",
+        {
+          "Umsetzung von": [
+            "Zugriffskontrollen",
+            "Verschl\u00fcsselung"
+          ]
+        },
+        "Backup & Recovery",
+        "Monitoring und Performance-Optimierung",
+        "Incident Management (z. B. Sicherheitsvorf\u00e4lle)"
+      ],
+      "authority": [
+        "Technische Umsetzung von Sicherheits- und Betriebsmassnahmen",
+        "Sofortmassnahmen bei Sicherheitsvorf\u00e4llen",
+        "Optimierung der Infrastruktur"
+      ],
+      "accountability": [
+        "Verf\u00fcgbarkeit",
+        "Integrit\u00e4t",
+        "Sicherheit (Confidentiality)",
+        "Nachvollziehbarkeit (Logging, Traceability)"
+      ],
+      "focus": "Technische Expertise einbringen.",
+      "expertise": "Teschnisch"
     },
     "dataSteward": {
-      "label": "Data Steward",
-      "definition": "A Person responsible for the datas meaning and its metadata",
+      "label": "\ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward)",
+      "definition": "Der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verst\u00e4ndlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.",
+      "slogan": "Der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Steward) sorgt daf\u00fcr, dass Daten richtig verstanden und richtig genutzt werden.",
       "aliases": [
-        "Datenverwalter"
+        "Data Steward"
       ],
       "related": [
         "dataCustodian",
         "dataOwner"
-      ]
+      ],
+      "responsibility": [
+        {
+          "Definiert gemeinsam mit Fachbereichen": [
+            "Datenanforderungen",
+            "Qualit\u00e4tskriterien"
+          ]
+        },
+        {
+          "Pflegt": [
+            "Metadaten (Data Catalog)",
+            "Business Glossary"
+          ]
+        },
+        "\u00dcberwacht und verbessert die Datenqualit\u00e4t",
+        "Koordiniert die Bereitstellung von Daten (inkl. OGD)",
+        "Analysiert und behebt Qualit\u00e4tsprobleme (m\u00f6glichst an der Quelle)"
+      ],
+      "authority": [
+        "Korrigiert operative Datenfehler",
+        "Definiert Qualit\u00e4tsregeln und Standards (mit Unterst\u00fctzung)",
+        "Entscheidet \u00fcber kleinere Anpassungen in Prozessen"
+      ],
+      "accountability": [
+        "Datenqualit\u00e4t (Accuracy, Completeness, Consistency)",
+        "Dokumentation & Transparenz",
+        "Semantische Klarheit (einheitliche Begriffe)",
+        "Einhaltung der Governance im Alltag"
+      ],
+      "focus": "Fachanforderungen sicherstellen.",
+      "expertise": "Fachlich"
     },
     "test": {
       "label": "Test",

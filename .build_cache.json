@@ -1,0 +1,15 @@
+{
+  "/home/pascal.hurni@blw.admin.ch/doc_automation/docs/input/diagram.svg": {
+    "input_hash": "4d12416fd1d58b9e8c1236c60552b944",
+    "terms_hash": "5a651c675ab383d54adabeaeb76f4ed4"
+  },
+  "/home/pascal.hurni@blw.admin.ch/doc_automation/docs/input/example.md": {
+    "input_hash": "e90f40d4af1cc5679a1a924ac6bb9a0e",
+    "terms_hash": "5a651c675ab383d54adabeaeb76f4ed4"
+  },
+  "_terms_hash": "5a651c675ab383d54adabeaeb76f4ed4",
+  "/home/pascal.hurni@blw.admin.ch/doc_automation/docs/input/refactoring_datagovernanz.md": {
+    "input_hash": "33211e351d84d48e9d558dfde84d2c40",
+    "terms_hash": "5a651c675ab383d54adabeaeb76f4ed4"
+  }
+}

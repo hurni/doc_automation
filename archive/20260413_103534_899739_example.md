@@ -1,0 +1,16 @@
+# Example Documentation
+
+The Datenverwalter checks the quality of Normalized Information bits.
+
+## Definition
+Data: Normalized Information bits
+
+## Related
+An Data Owner is often but not always the direct superior of the Data Steward.
+
+
+## Test
+Running Test: This is a testcase was successfull. Results for
+- {'label': 'Data Steward', 'definition': 'A Person responsible for the datas meaning and its metadata', 'aliases': ['Datenverwalter'], 'related': ['dataCustodian', 'dataOwner']}
+- dataOwner.related is The person responsible on the strategic level
+- Test
