@@ -113,5 +113,28 @@ terms:
       - dataCustodian
       - dataSteward
       - dataOwner
+  
+  gdg:
+    label: Gremium Datengouvernanz (GDG) 👥🧭
+    definition: Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichsübergreifende Entscheidungs- und Koordinationsgremium für Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.
+    responsibility: Entscheidet und koordiniert bei Konflikten zwischen 🧑‍✈️🧭 Dateneigner (Data Owner).
+    authority: Entscheidet bei Konflikten zwischen 🧑‍✈️🧭 Dateneigner (Data Owner) bei der Priorisierung von datenbezogenen Initiativen und Standardisierung und Harmonisierung von Daten.
+    accountability: Sorgt für eine Abstimmung zwischen Digitalisierungsstrategie BLW und Umsetzung der BLW Datengouvernanz, koordiniert die Umsetzungsinitiativen und löst Konflikte bei der Standardisierung und Harmonisierung von Daten.
+
+  dataManagementLead:
+    label: Data Management Lead 👤🧭
+    definition: Kompetenzstelle Daten und operative “Geschäftsstelle” für das DGD.
+    responsibility: 
+      - Operative Koordination der Data Governance 
+      - Vorbereitung von Entscheidungen DGD
+      - Tracking der Reifegradentwicklung
+    authority: None
+    accountability: 
+      - Meetings vorbereiten und dokumentieren
+      - Enabling der 👩‍💼💡 Datenverwalter (Data Stewards)
+    aliases: Data Management Specialist 👤⚙️
 
 
+  dataArchitect:
+    label: Datenarchitekt 👤⚙️
+    definition: bla.

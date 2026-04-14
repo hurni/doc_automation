@@ -64,20 +64,18 @@
       ],
       "responsibility": [
         {
-          "Betrieb von": null
+          "Betrieb von": [
+            "Datenbanken",
+            "Schnittstellen"
+          ]
         },
-        [
-          "Datenbanken",
-          "Schnittstellen"
-        ],
         "Infrastruktur (On-Prem / Cloud)",
         {
-          "Umsetzung von": null
+          "Umsetzung von": [
+            "Zugriffskontrollen",
+            "Verschl\u00fcsselung"
+          ]
         },
-        [
-          "Zugriffskontrollen",
-          "Verschl\u00fcsselung"
-        ],
         "Backup & Recovery",
         "Monitoring und Performance-Optimierung",
         "Incident Management (z. B. Sicherheitsvorf\u00e4lle)"
@@ -115,12 +113,11 @@
           ]
         },
         {
-          "Pflegt": null
+          "Pflegt": [
+            "Metadaten (Data Catalog)",
+            "Business Glossary"
+          ]
         },
-        [
-          "Metadaten (Data Catalog)",
-          "Business Glossary"
-        ],
         "\u00dcberwacht und verbessert die Datenqualit\u00e4t",
         "Koordiniert die Bereitstellung von Daten (inkl. OGD)",
         "Analysiert und behebt Qualit\u00e4tsprobleme (m\u00f6glichst an der Quelle)"
@@ -147,6 +144,32 @@
         "dataSteward",
         "dataOwner"
       ]
+    },
+    "gdg": {
+      "label": "Gremium Datengouvernanz (GDG) \ud83d\udc65\ud83e\udded",
+      "definition": "Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichs\u00fcbergreifende Entscheidungs- und Koordinationsgremium f\u00fcr Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.",
+      "responsibility": "Entscheidet und koordiniert bei Konflikten zwischen \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner).",
+      "authority": "Entscheidet bei Konflikten zwischen \ud83e\uddd1\u200d\u2708\ufe0f\ud83e\udded Dateneigner (Data Owner) bei der Priorisierung von datenbezogenen Initiativen und Standardisierung und Harmonisierung von Daten.",
+      "accountability": "Sorgt f\u00fcr eine Abstimmung zwischen Digitalisierungsstrategie BLW und Umsetzung der BLW Datengouvernanz, koordiniert die Umsetzungsinitiativen und l\u00f6st Konflikte bei der Standardisierung und Harmonisierung von Daten."
+    },
+    "dataManagementLead": {
+      "label": "Data Management Lead \ud83d\udc64\ud83e\udded",
+      "definition": "Kompetenzstelle Daten und operative \u201cGesch\u00e4ftsstelle\u201d f\u00fcr das DGD.",
+      "responsibility": [
+        "Operative Koordination der Data Governance",
+        "Vorbereitung von Entscheidungen DGD",
+        "Tracking der Reifegradentwicklung"
+      ],
+      "authority": "None",
+      "accountability": [
+        "Meetings vorbereiten und dokumentieren",
+        "Enabling der \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udca1 Datenverwalter (Data Stewards)"
+      ],
+      "aliases": "Data Management Specialist \ud83d\udc64\u2699\ufe0f"
+    },
+    "dataArchitect": {
+      "label": "Datenarchitekt \ud83d\udc64\u2699\ufe0f",
+      "definition": "bla."
     }
   }
 }

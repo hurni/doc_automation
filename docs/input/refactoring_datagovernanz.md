@@ -73,4 +73,32 @@ AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/w
 #### Verantwortung
 {{dataCustodian.accountability}}
 
-...
+
+## 3. Weitere Module
+### 3.1 {{gdg.label}}
+
+#### Kurzbeschreibung
+{{gdg.definition}}
+
+#### Aufgaben
+{{gdg.responsibility}}
+
+#### Kompetenzen
+{{gdg.authority}}
+
+#### Verantwortung
+{{gdg.accountability}}
+
+### 3.2 {{dataManagementLead.label}}
+
+#### Kurzbeschreibung
+{{dataManagementLead.definition}}
+
+#### Aufgaben
+{{dataManagementLead.responsibility}}
+
+#### Kompetenzen
+{{dataManagementLead.authority}}
+
+#### Verantwortung
+{{dataManagementLead.accountability}}
