@@ -54,12 +54,10 @@ terms:
       - dataSteward
     responsibility:
     - Betrieb von:
-    -
       - Datenbanken
       - Schnittstellen
     - Infrastruktur (On-Prem / Cloud)
     - Umsetzung von:
-    -
       - Zugriffskontrollen
       - Verschlüsselung
     - Backup & Recovery
@@ -88,10 +86,9 @@ terms:
       - dataOwner
     responsibility:
       - Definiert gemeinsam mit Fachbereichen:
-            - Datenanforderungen
-            - Qualitätskriterien
+        - Datenanforderungen
+        - Qualitätskriterien
       - Pflegt:
-      -   
         - Metadaten (Data Catalog)
         - Business Glossary
       - Überwacht und verbessert die Datenqualität
