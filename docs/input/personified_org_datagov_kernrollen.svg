@@ -34,7 +34,7 @@
 
     <!-- Data User -->
     <rect x="310" y="920" width="300" height="90" class="box user"/>
-    <text x="460" y="950" text-anchor="middle" class="title">Data User 👤⁉</text>
+    <text x="460" y="950" text-anchor="middle" class="title">{{dataUser.label}}</text>
     <text x="460" y="970" text-anchor="middle" class="text">Nutzung von Daten</text>
 
     <!-- Data User → Steward (vertikal links) -->
@@ -49,7 +49,7 @@
 
     <!-- Data Steward -->
     <rect x="120" y="720" width="300" height="100" class="box business"/>
-    <text x="260" y="750" text-anchor="middle" class="title">👩‍💼💡 Datenverwalter (Data Steward)</text>
+    <text x="260" y="750" text-anchor="middle" class="title">{{dataSteward.label}}</text>
     <text x="260" y="770" text-anchor="middle" class="text">Qualität • Harmonisierung</text>
     <text x="260" y="790" text-anchor="middle" class="text">Definition</text>
 
@@ -62,9 +62,9 @@
 
     <!-- Data Owner -->
     <rect x="120" y="540" width="300" height="100" class="box business"/>
-    <text x="260" y="570" text-anchor="middle" class="title">🧑‍✈️🧭 Dateneigner (Data Owner)</text>
-    <text x="260" y="590" text-anchor="middle" class="text">Fachliche Entscheidung</text>
-    <text x="260" y="610" text-anchor="middle" class="text">Business Verantwortung</text>
+    <text x="260" y="570" text-anchor="middle" class="title">{{dataOwner.label}}</text>
+    <text x="260" y="590" text-anchor="middle" class="text">Business Verantwortung</text>
+    <text x="260" y="610" text-anchor="middle" class="text">Fachbereichsübergreifende Probleme</text>
 
     <!-- Steward → Custodian (90° Knick) -->
     <line x1="420" y1="770" x2="670" y2="770" class="line"/>
@@ -75,7 +75,7 @@
 
     <!-- Data Custodian -->
     <rect x="530" y="540" width="300" height="100" class="box it"/>
-    <text x="670" y="570" text-anchor="middle" class="title">🕵🏻⚙️ Datenhalter (Data Custodian)</text>
+    <text x="670" y="570" text-anchor="middle" class="title">{{dataCustodian}}</text>
     <text x="670" y="590" text-anchor="middle" class="text">Technische Umsetzung</text>
     <text x="670" y="610" text-anchor="middle" class="text">Systeme • Datenhaltung</text>
 
@@ -95,7 +95,7 @@
 
     <!-- DGC (breit) -->
     <rect x="190" y="360" width="540" height="100" class="box neutral"/>
-    <text x="460" y="395" text-anchor="middle" class="title">Gremium Datengouvernanz (GDG) 👥🧭 / ACB</text>
+    <text x="460" y="395" text-anchor="middle" class="title">{{gdg.label}}</text>
     <text x="460" y="415" text-anchor="middle" class="text">Koordination zwischen Bereichen</text>
     <text x="460" y="435" text-anchor="middle" class="text">Standards • Priorisierung • Konfliktlösung</text>
 
@@ -107,7 +107,7 @@
     <!-- Direktion / GL als Dach-Dreieck -->
     <polygon points="100,240 820,240 460,120" class="gl"/>
     <polygon points="100,240 820,240 460,120" class="line"/>
-    <text x="460" y="200" text-anchor="middle" class="title">Direktion (GL)</text>
+    <text x="460" y="200" text-anchor="middle" class="title">{{bod.aliases}}</text>
     <text x="460" y="220" text-anchor="middle" class="text">Ownership • Silos • Prioritäten</text>
 
 </svg>
