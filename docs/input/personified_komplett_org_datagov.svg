@@ -32,7 +32,7 @@
 
     <!-- DATA USER -->
     <rect x="750" y="1320" width="300" height="100" class="box user"/>
-    <text x="900" y="1350" text-anchor="middle" class="title">Data User</text>
+    <text x="900" y="1350" text-anchor="middle" class="title">{{dataUser.label}}</text>
     <text x="720" y="1375" class="small">
         <tspan x="800" dy="16">• Nutzung </tspan>
         <tspan x="800" dy="16">• Meldet Fehler</tspan>
@@ -41,7 +41,7 @@
 
     <!-- DATA STEWARD -->
     <rect x="200" y="1040" width="360" height="220" class="core"/>
-    <text x="380" y="1070" text-anchor="middle" class="title">Data Steward</text>
+    <text x="380" y="1070" text-anchor="middle" class="title">{{dataSteward.alias_de}}</text>
     <text x="220" y="1095" class="text">
         <tspan x="220" class="akv">Aufgaben</tspan>
         <tspan x="220" dy="16">• Anforderungen definieren</tspan>
@@ -57,7 +57,7 @@
 
     <!-- External Data Custodian -->
     <rect width="260" height="130" transform="translate(-50,1290) rotate(270)" class="core"/>
-    <text transform="translate(0,1160) rotate(270)" text-anchor="middle" class="title">Externer Data Custodian</text>
+    <text transform="translate(0,1160) rotate(270)" text-anchor="middle" class="title">Externer {{dataCustodian.alias_de}}</text>
     <text transform="translate(20,1285) rotate(270)" class="text">
         <tspan x="20" class="akv">Beispielsweise bei extern</tspan>
         <tspan x="20" dy="16">betriebenen Fachanwendungen</tspan>
@@ -67,7 +67,7 @@
 
     <!-- DATA OWNER -->
     <rect x="200" y="760" width="360" height="220" class="core"/>
-    <text x="380" y="790" text-anchor="middle" class="title">Data Owner</text>
+    <text x="380" y="790" text-anchor="middle" class="title">{{dataOwner.alias_de}}</text>
     <text x="220" y="815" class="text">
         <tspan x="220" class="akv">Aufgaben</tspan>
         <tspan x="220" dy="16">• Strategische Bedeutung</tspan>
@@ -83,7 +83,7 @@
 
     <!-- DATA CUSTODIAN -->
     <rect x="1220" y="760" width="360" height="220" class="core"/>
-    <text x="1400" y="790" text-anchor="middle" class="title">Data Custodian</text>
+    <text x="1400" y="790" text-anchor="middle" class="title">{{dataCustodian.alias_de}}</text>
     <text x="1240" y="815" class="text">
         <tspan x="1240" class="akv">Aufgaben</tspan>
         <tspan x="1240" dy="16">• Betrieb Systeme &amp; Datenbanken</tspan>
@@ -103,7 +103,7 @@
     </rect>
 
 
-    <text x="900" y="535" text-anchor="middle" class="title">Gremium Datengouvernanz (GDG) / Architektur Change Board</text>
+    <text x="900" y="535" text-anchor="middle" class="title">{{gdg.label}}</text>
     <text x="800" y="565" class="text">
         <tspan x="800">• Standards </tspan>
         <tspan x="800" dy="16">• Policies </tspan>
@@ -113,7 +113,7 @@
 
     <!-- DATA LEAD -->
     <rect x="700" y="820" width="400" height="140" class="ext"/>
-    <text x="900" y="850" text-anchor="middle" class="title">Data Lead</text>
+    <text x="900" y="850" text-anchor="middle" class="title">{{dataManagementLead.label}}</text>
     <text x="800" y="875" class="small">
         <tspan x="800">• Koordination Governance</tspan>
         <tspan x="800" dy="15">• Unterstützung Data Steward</tspan>
@@ -126,14 +126,14 @@
     <text x="900" y="1050" text-anchor="middle" class="title">IT &amp; Compliance Rollen</text>
     <text x="800" y="1075" class="small">
         <tspan x="800">• Application Owner</tspan>
-        <tspan x="800" dy="15">• Data Architect</tspan>
-        <tspan x="800" dy="15">• Datenschutzberater 👤⚖️</tspan>
-        <tspan x="800" dy="15">• ISBO (Informationssicherheitsbeauftragter der Organisation) 👤⚠️</tspan>
+        <tspan x="800" dy="15">• {{dataArchitect.label}}</tspan>
+        <tspan x="800" dy="15">• {{complianceOfficer.label}}</tspan>
+        <tspan x="800" dy="15">• {{informationSecurityOfficer.label}}</tspan>
     </text>
 
     <!-- GL -->
     <polygon points="200,300 1600,300 900,120" class="box" fill="#00aaaa"/>
-    <text x="900" y="220" text-anchor="middle" class="title">Geschäftsleitung</text>
+    <text x="900" y="220" text-anchor="middle" class="title">{{bod.label}}</text>
 
     <!-- PFEILE KOMPAKT ORTHOGONAL -->
 
