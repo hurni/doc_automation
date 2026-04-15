@@ -21,8 +21,8 @@ terms:
     label: 🧑‍✈️🧭 Dateneigner (Data Owner)
     slogan: Der 🧑‍✈️🧭 Dateneigner (Data Owner) trägt die accountability – auch wenn er nicht operativ arbeitet.
     description: Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitung und trägt die Gesamtaccountability für die Daten seines Bereichs. Er entscheidet, wofür Daten genutzt werden dürfen, wie wichtig sie sind und welche Risiken akzeptiert werden.
-    aliases:
-      - Data Owner
+    alias_en: Data Owner
+    alias_de: 🧑‍✈️🧭 Dateneigner
     related:
       - dataCustodian
       - dataSteward
@@ -47,8 +47,8 @@ terms:
     label: 🕵🏻⚙️ Datenhalter (Data Custodian)
     description: Der 🕵🏻⚙️ Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verfügbar, sicher und performant sind. Wo die 🕵🏻⚙️ Datenhalter (Data Custodian) angesiedelt sind, hängt von den jeweiligen Daten ab. Diese können im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.
     slogan: Der 🕵🏻⚙️ Datenhalter (Data Custodian) sorgt dafür, dass Daten sicher und zuverlässig gespeichert und extrahiert werden.
-    aliases:
-      - Data Custodian
+    alias_en: Data Custodian
+    alias_de: 🕵🏻⚙️ Datenhalter
     related:
       - dataOwner
       - dataSteward
@@ -79,8 +79,8 @@ terms:
     label: 👩‍💼💡 Datenverwalter (Data Steward)
     description: Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verständlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.
     slogan: Der 👩‍💼💡 Datenverwalter (Data Steward) sorgt dafür, dass Daten richtig verstanden und richtig genutzt werden.
-    aliases:
-      - Data Steward
+    alias_en: Data Steward
+    alias_de: 👩‍💼💡 Datenverwalter
     related:
       - dataCustodian
       - dataOwner
@@ -106,14 +106,7 @@ terms:
     focus: Fachanforderungen sicherstellen.
     expertise: Fachlich
 
-  test:
-    label: Test
-    description: This is a testcase
-    related:
-      - dataCustodian
-      - dataSteward
-      - dataOwner
-  
+ 
   gdg:
     label: Gremium Datengouvernanz (GDG) 👥🧭 / ACB
     description: Das Gremium Datengouvernanz (DGD) ist das zentrale, bereichsübergreifende Entscheidungs- und Koordinationsgremium für Datenfragen. Die Mitglieder sind mandatiert und ihre Entscheidungen sind verbindlich.
@@ -123,6 +116,7 @@ terms:
 
   bod:
     label: Geschäftsleitung
+    alias_de: Direktion (GL)
     description: Die Geschäftsleitung ist die oberste Entscheidungsinstanz für strategische und strukturelle Datenkonflikte. Die Geschäftsleitung entscheidet entlang der Organisationsstrategie – nicht entlang bestehender Strukturen.
 
   dataManagementLead:
@@ -132,7 +126,7 @@ terms:
       - Operative Koordination der Data Governance 
       - Vorbereitung von Entscheidungen DGD
       - Tracking der Reifegradentwicklung
-    authority: None
+    authority: Keine
     accountability: 
       - Meetings vorbereiten und dokumentieren
       - Enabling der 👩‍💼💡 Datenverwalter (Data Stewards)
@@ -173,7 +167,7 @@ terms:
   dataUser:
     label: Data User 👤⁉️
     description: Ein Data User ⁉️  will Daten des BLW für eine Projekte verwenden. Der Data User 👤⁉️  kann innerhalb oder ausserhalb des BLW arbeiten. Er/sie kann die Daten aber auch für private Projekte verwenden wollen. 
-    responsibility: None
+    responsibility: Keine
     authority: 
     - Daten verwenden oder nicht?
     - Spezifische Anforderungen an den  👩‍💼💡 Datenverwalter (Data Steward) melden.

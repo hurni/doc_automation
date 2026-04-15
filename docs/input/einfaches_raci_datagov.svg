@@ -20,8 +20,8 @@
   <rect x="80" y="120" width="280" height="200" class="box owner"/>
 
   <text x="90" y="150" class="text">
-    <tspan x="90" class="subtitle">🧑‍✈️🧭 Dateneigner</tspan>
-    <tspan x="155" dy="20" class="text">(Data Owner)</tspan>
+    <tspan x="90" class="subtitle">{{dataOwner.alias_de}}</tspan>
+    <tspan x="155" dy="20" class="text">{{dataOwner.alias_en}}</tspan>
     <tspan x="90" dy="10" class="text">____________________________________</tspan>
     <tspan x="130" dy="24" class="text">Verantwortung &amp; Steuerung</tspan>
     <tspan x="100" dy="10" class="text">____________________________________</tspan>
@@ -33,8 +33,8 @@
   <!-- 👩‍💼💡 Datenverwalter (Data Steward) -->
   <rect x="390" y="120" width="280" height="200" class="box steward"/>
   <text x="400" y="150" class="text">
-    <tspan x="400" class="subtitle">👩‍💼💡 Datenverwalter </tspan>
-    <tspan x="465" dy="20" class="text">(Data Steward)</tspan>
+    <tspan x="400" class="subtitle">{{dataSteward.alias_de}}</tspan>
+    <tspan x="465" dy="20" class="text">{{dataSteward.alias_en}}</tspan>
     <tspan x="400" dy="10" class="text">____________________________________</tspan>
     <tspan x="430" dy="24" class="text">Qualität, Nutzung &amp; Interpretation</tspan>
     <tspan x="400" dy="10" class="text">____________________________________</tspan>
@@ -49,8 +49,8 @@
   <rect x="700" y="120" width="280" height="200" class="box custodian"/>
 
   <text x="710" y="150" class="text">
-    <tspan x="710" class="subtitle">🕵🏻⚙️ Datenhalter</tspan>
-    <tspan x="775" dy="20" class="text">(Data Custodian)</tspan>
+    <tspan x="710" class="subtitle">{{dataCustodian.alias_de}}</tspan>
+    <tspan x="775" dy="20" class="text">{{dataCustodian.alias_en}}</tspan>
     <tspan x="710" dy="10" class="text">____________________________________</tspan>
     <tspan x="750" dy="24" class="text">Infrastruktur, Provision &amp; Sicherheit</tspan>
     <tspan x="720" dy="10" class="text">____________________________________</tspan>
@@ -85,9 +85,9 @@
 
   <!-- Table headers -->
   <text x="300" y="420" class="text">Aktivität</text>
-  <text x="600" y="420" class="text">Owner</text>
-  <text x="730" y="420" class="text">Steward</text>
-  <text x="860" y="420" class="text">Custodian</text>
+  <text x="600" y="420" class="text">{{dataOwner.alias_de}}</text>
+  <text x="730" y="420" class="text">{{dataSteward.alias_de}}</text>
+  <text x="860" y="420" class="text">{{dataCustodian.alias_de}}</text>
 
   <!-- Rows -->
   <text x="300" y="450" class="text">Priorisieren und Ressourcen zuteilen</text>

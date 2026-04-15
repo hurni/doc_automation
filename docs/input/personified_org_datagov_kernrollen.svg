@@ -107,7 +107,7 @@
     <!-- Direktion / GL als Dach-Dreieck -->
     <polygon points="100,240 820,240 460,120" class="gl"/>
     <polygon points="100,240 820,240 460,120" class="line"/>
-    <text x="460" y="200" text-anchor="middle" class="title">{{bod.aliases}}</text>
+    <text x="460" y="200" text-anchor="middle" class="title">{{bod.alias_de}}</text>
     <text x="460" y="220" text-anchor="middle" class="text">Ownership • Silos • Prioritäten</text>
 
 </svg>
