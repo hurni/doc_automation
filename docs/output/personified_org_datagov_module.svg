@@ -1,0 +1,173 @@
+<svg width="1950" height="1500" viewBox="-150 0 1800 1500"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <style>
+.box { stroke:#2c3e50; stroke-width:1; }
+.core { fill:#e3f2fd; stroke:#1e88e5; stroke-width:4; rx:20; }
+.ext { fill:#f5f5f5; stroke:#9e9e9e; opacity:0.95; rx:15; }
+.gremium { fill:#fff3e0; stroke:#fb8c00; stroke-width:1; }
+.fach-bg { fill:#eaf4fb; }
+.it-bg { fill:#d6e4ff; }
+.user { fill:#fde6e6; }
+.title { font:bold 18px sans-serif; }
+.akv { font:bold 13px sans-serif; }
+.text { font: 13px sans-serif; }
+.small { font: 12px sans-serif; }
+.arrow { stroke:#2c3e50; stroke-width:2; fill:none; marker-end:url(#arrow); }
+
+    </style>
+
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+        </marker>
+    </defs>
+
+    <!-- CONTAINER -->
+    <rect x="120" y="420" width="520" height="880" class="box fach-bg"/>
+    <text x="140" y="450" class="title">Fach</text>
+
+    <rect x="1160" y="420" width="520" height="880" class="box it-bg"/>
+    <text x="1180" y="450" class="title">FBDD</text>
+
+    <!-- DATA USER -->
+    <rect x="750" y="1320" width="300" height="100" class="box user"/>
+    <text x="900" y="1350" text-anchor="middle" class="title">Data User 👤⁉</text>
+    <text x="720" y="1365" class="small">
+        <tspan x="800" dy="16">• Nutzung </tspan>
+        <tspan x="800" dy="16">• Meldet Fehler</tspan>
+    </text>
+
+
+    <!-- DATA STEWARD -->
+    <rect x="200" y="1040" width="360" height="220" class="core"/>
+    <text x="380" y="1070" text-anchor="middle" class="title">👩‍💼💡 Datenverwalter (Data Steward)</text>
+    <text x="220" y="1095" class="text">
+        <tspan x="220" class="akv">Aufgaben</tspan>
+        <tspan x="220" dy="16">• Anforderungen definieren</tspan>
+        <tspan x="220" dy="16">• Qualitätsregeln &amp; Monitoring</tspan>
+        <tspan x="220" dy="16">• Metadaten &amp; Glossar</tspan>
+        <tspan x="220" dy="16">• Datenbereitstellung koordinieren</tspan>
+        <tspan x="220" dy="20" class="akv">Kompetenzen</tspan>
+        <tspan x="220" dy="16">• Korrigiert Datenfehler</tspan>
+        <tspan x="220" dy="16">• Definiert Standards</tspan>
+        <tspan x="220" dy="20" class="akv">Verantwortung</tspan>
+        <tspan x="220" dy="16">• Verantwortung Datenqualität</tspan>
+    </text>
+
+    <!-- External Data Custodian -->
+    <rect width="260" height="130" transform="translate(-50,1290) rotate(270)" class="core"/>
+    <text transform="translate(0,1160) rotate(270)" text-anchor="middle" class="title">Externer 🕵🏻⚙️ Datenhalter</text>
+    <text transform="translate(20,1285) rotate(270)" class="text">
+        <tspan x="20" class="akv">Beispielsweise bei extern</tspan>
+        <tspan x="20" dy="16">betriebenen Fachanwendungen</tspan>
+        <tspan x="20" dy="16">oder bei externen Datenquellen</tspan>
+
+    </text>
+
+    <!-- DATA OWNER -->
+    <rect x="200" y="760" width="360" height="220" class="core"/>
+    <text x="380" y="790" text-anchor="middle" class="title">🧑‍✈️🧭 Dateneigner (Data Owner)</text>
+    <text x="220" y="815" class="text">
+        <tspan x="220" class="akv">Aufgaben</tspan>
+        <tspan x="220" dy="16">• Strategische Bedeutung</tspan>
+        <tspan x="220" dy="16">• Priorisierung Initiativen</tspan>
+        <tspan x="220" dy="16">• Freigabe Datennutzung</tspan>
+        <tspan x="220" dy="16">• Ressourcen bereitstellen</tspan>
+        <tspan x="220" dy="20" class="akv">Kompetenzen</tspan>
+        <tspan x="220" dy="16">• Risiko- &amp; Eskalationsentscheide</tspan>
+        <tspan x="220" dy="20" class="akv">Verantwortung</tspan>
+        <tspan x="220" dy="16">• Gesamtverantwortung</tspan>
+        <tspan x="220" dy="16">• Compliance</tspan>
+    </text>
+
+    <!-- DATA CUSTODIAN -->
+    <rect x="1220" y="760" width="360" height="220" class="core"/>
+    <text x="1400" y="790" text-anchor="middle" class="title">🕵🏻⚙️ Datenhalter (Data Custodian)</text>
+    <text x="1240" y="815" class="text">
+        <tspan x="1240" class="akv">Aufgaben</tspan>
+        <tspan x="1240" dy="16">• Betrieb Systeme &amp; Datenbanken</tspan>
+        <tspan x="1240" dy="16">• Schnittstellen &amp; Infrastruktur</tspan>
+        <tspan x="1240" dy="16">• Zugriff &amp; Sicherheit</tspan>
+        <tspan x="1240" dy="16">• Monitoring &amp; Incident Mgmt</tspan>
+        <tspan x="1240" dy="20" class="akv">Kompetenzen</tspan>
+        <tspan x="1240" dy="16">• Technische Umsetzung</tspan>
+        <tspan x="1240" dy="20" class="akv">Verantwortung</tspan>
+        <tspan x="1240" dy="16">• Verfügbarkeit &amp; Integrität</tspan>
+    </text>
+
+    <!-- GDG -->
+    <rect x="500" y="500" width="800" height="140" class="gremium">
+        <!-- Start rotating on hover -->
+    </rect>
+
+
+    <text x="900" y="535" text-anchor="middle" class="title">Gremium Datengouvernanz (GDG) 👥🧭 / ACB</text>
+    <text x="800" y="565" class="text">
+        <tspan x="800">• Standards </tspan>
+        <tspan x="800" dy="16">• Policies </tspan>
+        <tspan x="800" dy="16">• Priorisierung </tspan>
+        <tspan x="800" dy="16">• Konfliktlösung</tspan>
+    </text>
+
+    <!-- DATA LEAD -->
+    <rect x="700" y="820" width="400" height="140" class="ext"/>
+    <text x="900" y="850" text-anchor="middle" class="title">Data Management Lead 👤🧭</text>
+    <text x="800" y="875" class="small">
+        <tspan x="730">• Koordination Governance</tspan>
+        <tspan x="730" dy="15">• Unterstützung 👩‍💼💡 Datenverwalter (Data Steward)</tspan>
+        <tspan x="730" dy="15">• Methoden &amp; Qualität</tspan>
+        <tspan x="730" dy="15">• Entscheidvorbereitung</tspan>
+    </text>
+
+    <!-- IT -->
+    <rect x="700" y="1020" width="400" height="160" class="ext"/>
+    <text x="900" y="1050" text-anchor="middle" class="title">IT &amp; Compliance Rollen</text>
+    <text x="800" y="1075" class="small">
+        <tspan x="730">Anwendungsverantwortliche (Application Owner)👤💻</tspan>
+        <tspan x="730" dy="15">• Data Architect  👤📐</tspan>
+        <tspan x="730" dy="15">• Datenschutzberater 👤⚖️</tspan>
+        <tspan x="730" dy="15">• ISBO (Informationssicherheitsbeauftragter der Organisation) 👤⚠️</tspan>
+    </text>
+
+    <!-- GL -->
+    <polygon points="200,300 1600,300 900,120" class="box" fill="#00aaaa"/>
+    <text x="900" y="220" text-anchor="middle" class="title">Geschäftsleitung</text>
+
+    <!-- PFEILE KOMPAKT ORTHOGONAL -->
+
+    <!-- Data User -> Data Steward -->
+    <path d="M750 1370 H380 V1260" class="arrow"/>
+
+    <!-- Data Steward -> Data Owner -->
+    <path d="M380 1040 V980" class="arrow"/>
+
+    <!-- Data Steward -> Data Custodian -->
+    <path d="M560 1200 H1410 V980" class="arrow"/>
+
+    <!-- Data Owner -> GDG (links) -->
+    <path d="M380 760 V570 H500" class="arrow"/>
+
+    <!-- Data Custodian -> GDG (rechts) -->
+    <path d="M1400 760 V570 H1300" class="arrow"/>
+
+    <!-- GDG -> GL -->
+    <path d="M900 500 V300" class="arrow"/>
+
+    <!-- Data Lead -> Data Steward -->
+    <path d="M700 900 H590 V1120 H560" class="arrow"/>
+
+    <!-- Data Lead -> GDG -->
+    <path d="M900 820 V640" class="arrow"/>
+
+    <!-- IT -> Data Steward -->
+    <path d="M700 1140 H560" class="arrow"/>
+
+    <!-- IT -> Data Custodian -->
+    <path d="M1100 1100 H1390 V980" class="arrow"/>
+
+    <!-- IT <-> Data Steward -->
+    <path d="M200 1140 H80" class="arrow"/>
+    <path d="M80 1140 H200" class="arrow"/>
+
+</svg>

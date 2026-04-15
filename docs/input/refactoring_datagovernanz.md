@@ -32,12 +32,12 @@ AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/w
 > ⚠️ {{dataOwner.slogan}}
 
 #### Kurzbeschreibung
-{{dataOwner.definition}}
+{{dataOwner.description}}
 
 #### Aufgaben
 {{dataOwner.responsibility}}
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 {{dataOwner.authority}}
 
 #### Verantwortung
@@ -47,12 +47,12 @@ AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/w
 > ⚠️ {{dataSteward.slogan}}
 
 #### Kurzbeschreibung
-{{dataSteward.definition}}
+{{dataSteward.description}}
 
 #### Aufgaben
 {{dataSteward.responsibility}}
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 {{dataSteward.authority}}
 
 #### Verantwortung
@@ -62,12 +62,12 @@ AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/w
 > ⚠️ {{dataCustodian.slogan}}
 
 #### Kurzbeschreibung
-{{dataCustodian.definition}}
+{{dataCustodian.description}}
 
 #### Aufgaben
 {{dataCustodian.responsibility}}
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 {{dataCustodian.authority}}
 
 #### Verantwortung
@@ -75,30 +75,79 @@ AKV als Tabelle: [Kernrollen: Tabelle AKV](https://blw-ofag-ufag.atlassian.net/w
 
 
 ## 3. Weitere Module
-### 3.1 {{gdg.label}}
+Je nach Komplexität des Prozesses ist es sinnvoll, die drei Kernrollen mit weiteren Rollen zu ergänzen. 
+Die Kernrollen behalten ihre Verantwortung, können aber Aufgaben und Entscheidungen an weitere involvierte Stellen abtreten.
+
+### 3.1 Governance & Steuerung
+
+#### 3.1.1 {{gdg.label}}
 
 #### Kurzbeschreibung
-{{gdg.definition}}
+{{gdg.description}}
 
 #### Aufgaben
 {{gdg.responsibility}}
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 {{gdg.authority}}
 
 #### Verantwortung
 {{gdg.accountability}}
 
+#### 3.1.2 {{bod.label}}
+{{bod.description}}
+
 ### 3.2 {{dataManagementLead.label}}
 
 #### Kurzbeschreibung
-{{dataManagementLead.definition}}
+{{dataManagementLead.description}}
 
 #### Aufgaben
 {{dataManagementLead.responsibility}}
 
-#### Kompetenzen
+#### Entscheidungskompetenzen
 {{dataManagementLead.authority}}
 
 #### Verantwortung
 {{dataManagementLead.accountability}}
+
+### 3.3 {{complianceOfficer.label}}
+
+#### Kurzbeschreibung
+{{complianceOfficer.description}}
+
+#### Aufgaben
+{{complianceOfficer.responsibility}}
+
+#### Entscheidungskompetenzen
+{{complianceOfficer.authority}}
+
+#### Verantwortung
+{{complianceOfficer.accountability}}
+
+### 3.4 {{informationSecurityOfficer.label}}
+
+#### Kurzbeschreibung
+{{informationSecurityOfficer.description}}
+
+#### Aufgaben
+{{informationSecurityOfficer.responsibility}}
+
+#### Entscheidungskompetenzen
+{{informationSecurityOfficer.authority}}
+
+#### Verantwortung
+{{informationSecurityOfficer.accountability}}
+### 3.5 {{dataUser.label}}
+
+#### Kurzbeschreibung
+{{dataUser.description}}
+
+#### Aufgaben
+{{dataUser.responsibility}}
+
+#### Entscheidungskompetenzen
+{{dataUser.authority}}
+
+#### Verantwortung
+{{dataUser.accountability}}

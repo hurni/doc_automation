@@ -1,0 +1,127 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
+      .title { font: bold 20px sans-serif; fill: #2c3e50; }
+      .subtitle { font: bold 22px sans-serif; fill: #2c3e50; }
+      .text { font: 13px sans-serif; fill: #2c3e50; }
+      .box { stroke: #2c3e50; stroke-width: 2; rx: 12; }
+      .owner { fill: #fdecea; }
+      .steward { fill: #e8f4fd; }
+      .custodian { fill: #eafaf1; }
+      .raci { font: bold 14px monospace; fill: #2c3e50; }
+  </style>
+
+  <!-- Title -->
+  <text x="500" y="80" text-anchor="middle" class="title">
+    Data Governance – Rollen und Verantwortung
+  </text>
+
+  <!-- 🧑‍✈️🧭 Dateneigner (Data Owner) -->
+  <rect x="80" y="120" width="280" height="200" class="box owner"/>
+
+  <text x="90" y="150" class="text">
+    <tspan x="90" class="subtitle">🧑‍✈️🧭 Dateneigner</tspan>
+    <tspan x="155" dy="20" class="text">(Data Owner)</tspan>
+    <tspan x="90" dy="10" class="text">____________________________________</tspan>
+    <tspan x="130" dy="24" class="text">Verantwortung &amp; Steuerung</tspan>
+    <tspan x="100" dy="10" class="text">____________________________________</tspan>
+    <tspan x="100" dy="32" class="text">• Prioritäten und Nutzung</tspan>
+    <tspan x="100" dy="18" class="text">• Risiko und Compliance</tspan>
+    <tspan x="100" dy="18" class="text">• Ressourcen</tspan>
+  </text>
+
+  <!-- 👩‍💼💡 Datenverwalter (Data Steward) -->
+  <rect x="390" y="120" width="280" height="200" class="box steward"/>
+  <text x="400" y="150" class="text">
+    <tspan x="400" class="subtitle">👩‍💼💡 Datenverwalter </tspan>
+    <tspan x="465" dy="20" class="text">(Data Steward)</tspan>
+    <tspan x="400" dy="10" class="text">____________________________________</tspan>
+    <tspan x="430" dy="24" class="text">Qualität, Nutzung &amp; Interpretation</tspan>
+    <tspan x="400" dy="10" class="text">____________________________________</tspan>
+    <tspan x="410" dy="32" class="text">• Datenqualität sicherstellen</tspan>
+    <tspan x="410" dy="18" class="text">• Fachliche Begriffsdefinitionen festlegen</tspan>
+    <tspan x="410" dy="18" class="text">• Metadaten pflegen</tspan>
+  </text>
+
+
+
+  <!-- 🕵🏻⚙️ Datenhalter (Data Custodian) -->
+  <rect x="700" y="120" width="280" height="200" class="box custodian"/>
+
+  <text x="710" y="150" class="text">
+    <tspan x="710" class="subtitle">🕵🏻⚙️ Datenhalter</tspan>
+    <tspan x="775" dy="20" class="text">(Data Custodian)</tspan>
+    <tspan x="710" dy="10" class="text">____________________________________</tspan>
+    <tspan x="750" dy="24" class="text">Infrastruktur, Provision &amp; Sicherheit</tspan>
+    <tspan x="720" dy="10" class="text">____________________________________</tspan>
+    <tspan x="720" dy="32" class="text">• Betrieb</tspan>
+    <tspan x="720" dy="18" class="text">• Sicherheit</tspan>
+    <tspan x="720" dy="18" class="text">• Infrastruktur</tspan>
+  </text>
+
+
+  <!-- Legende -->ööööö
+  <rect x="80" y="350" width="170" height="320" class="box" fill="#ffffff"/>
+
+  <text x="140" y="380" text-anchor="middle" class="subtitle">
+      Legende
+  </text>
+  <text x="100" y="420" text-anchor="left" class="text">R</text>
+  <text x="100" y="450" text-anchor="left" class="text">A</text>
+  <text x="100" y="480" text-anchor="left" class="text">C</text>
+  <text x="100" y="510" text-anchor="left" class="text">I</text>
+
+  <text x="120" y="420" text-anchor="left" class="text">Ausführend</text>
+  <text x="120" y="450" text-anchor="left" class="text">Verantwortlich</text>
+  <text x="120" y="480" text-anchor="left" class="text">Wird konsultiert</text>
+  <text x="120" y="510" text-anchor="left" class="text">Wird informiert</text>
+
+
+  <!-- RACI Table -->
+  <rect x="280" y="350" width="700" height="320" class="box" fill="#ffffff"/>
+  <text x="570" y="380" text-anchor="middle" class="subtitle">
+      Vereinfachte RACI-Matrix
+  </text>
+
+  <!-- Table headers -->
+  <text x="300" y="420" class="text">Aktivität</text>
+  <text x="600" y="420" class="text">Owner</text>
+  <text x="730" y="420" class="text">Steward</text>
+  <text x="860" y="420" class="text">Custodian</text>
+
+  <!-- Rows -->
+  <text x="300" y="450" class="text">Priorisieren und Ressourcen zuteilen</text>
+  <text x="600" y="450" class="raci">A</text>
+  <text x="730" y="450" class="raci">R</text>
+  <text x="860" y="450" class="raci">I</text>
+
+  <text x="300" y="480" class="text">Zweck und Nutzung der Datensammlung</text>
+  <text x="300" y="495" class="text">festlegen</text>
+  <text x="600" y="480" class="raci">A</text>
+  <text x="730" y="480" class="raci">R</text>
+  <text x="860" y="480" class="raci">C</text>
+
+  <text x="300" y="520" class="text">Kritische Datennutzungen freigeben</text>
+  <text x="300" y="535" class="text">(OGD, Datenaustausch)</text>
+  <text x="600" y="520" class="raci">A</text>
+  <text x="730" y="520" class="raci">R</text>
+  <text x="860" y="520" class="raci">I</text>
+
+  <text x="300" y="560" class="text">Sicherstellen, dass die Datenqualität </text>
+  <text x="300" y="575" class="text">dem Zweck genügt</text>
+  <text x="600" y="560" class="raci">C</text>
+  <text x="730" y="560" class="raci">A/R</text>
+  <text x="860" y="560" class="raci">C</text>
+
+  <text x="300" y="600" class="text">Betrieb der Infrastruktur sicherstellen und</text>
+  <text x="300" y="615" class="text">Daten bereitstellen</text>
+  <text x="600" y="600" class="raci">I</text>
+  <text x="730" y="600" class="raci">C</text>
+  <text x="860" y="600" class="raci">A/R</text>
+
+  <text x="300" y="640" class="text">Dokumentation und pflege der Metadaten</text>
+  <text x="600" y="640" class="raci">I</text>
+  <text x="730" y="640" class="raci">A/R</text>
+  <text x="860" y="640" class="raci">I</text>
+
+</svg>

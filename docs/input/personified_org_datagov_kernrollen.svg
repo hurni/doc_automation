@@ -1,0 +1,113 @@
+<svg width="920" height="1050" viewBox="0 0 920 1050"
+    xmlns="http://www.w3.org/2000/svg">
+
+    <style>
+.box { stroke:#2c3e50; stroke-width:2; rx:10; }
+.fach-bg { fill:#eaf4fb; }
+.it-bg { fill:#c1d6f5; }
+.business { fill:#f4f6f7 ; }
+.it { fill:#e3edff; }
+.user { fill: #fde6e6 }
+.neutral { fill:#d4e6fb; }
+.plain { fill:none; }
+.gl {fill: #fff9e6; } 
+.title { font:bold 16px sans-serif; fill:#2c3e50; }
+.label { font:italic 12px sans-serif; fill:#555; }
+.arrow { stroke:#2c3e50; stroke-width:2; fill:none; marker-end:url(#arrow); }
+.line { stroke:#2c3e50; stroke-width:2; fill:none; }
+.text { font: 13px sans-serif; fill: #2c3e50; }
+    </style>
+
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+        </marker>
+    </defs>
+
+    <!-- Container Fach -->
+    <rect x="80" y="300" width="360" height="580" class="box fach-bg"/>
+    <text x="100" y="330" class="title">Fach</text>
+
+    <!-- Container IT -->
+    <rect x="480" y="300" width="360" height="580" class="box it-bg"/>
+    <text x="500" y="330" class="title">FBDD</text>
+
+    <!-- Data User -->
+    <rect x="310" y="920" width="300" height="90" class="box user"/>
+    <text x="460" y="950" text-anchor="middle" class="title">Data User 👤⁉</text>
+    <text x="460" y="970" text-anchor="middle" class="text">Nutzung von Daten</text>
+
+    <!-- Data User → Steward (vertikal links) -->
+    <line x1="310" y1="965" x2="260" y2="965" class="line"/>
+    <line x1="260" y1="965" x2="260" y2="820" class="arrow"/>
+    <text x="120" y="910" class="label">
+        <tspan x="120" dy="0">Anfragen zu Daten</tspan>
+        <tspan x="120" dy="14">Anforderungen zur </tspan>
+        <tspan x="120" dy="14">Bereitstellung</tspan>
+    </text>
+
+
+    <!-- Data Steward -->
+    <rect x="120" y="720" width="300" height="100" class="box business"/>
+    <text x="260" y="750" text-anchor="middle" class="title">👩‍💼💡 Datenverwalter (Data Steward)</text>
+    <text x="260" y="770" text-anchor="middle" class="text">Qualität • Harmonisierung</text>
+    <text x="260" y="790" text-anchor="middle" class="text">Definition</text>
+
+    <!-- Steward → Owner -->
+    <line x1="260" y1="720" x2="260" y2="640" class="arrow"/>
+    <text x="180" y="670" class="label">
+        <tspan x="120" dy="0">Fachliche Probleme</tspan>
+        <tspan x="120" dy="14">fachbereichsintern</tspan>
+    </text>
+
+    <!-- Data Owner -->
+    <rect x="120" y="540" width="300" height="100" class="box business"/>
+    <text x="260" y="570" text-anchor="middle" class="title">🧑‍✈️🧭 Dateneigner (Data Owner)</text>
+    <text x="260" y="590" text-anchor="middle" class="text">Fachliche Entscheidung</text>
+    <text x="260" y="610" text-anchor="middle" class="text">Business Verantwortung</text>
+
+    <!-- Steward → Custodian (90° Knick) -->
+    <line x1="420" y1="770" x2="670" y2="770" class="line"/>
+    <line x1="670" y1="770" x2="670" y2="640" class="arrow"/>
+    <text x="690" y="670" class="label">
+        <tspan x="690" dy="0">Technische Probleme</tspan>
+    </text>
+
+    <!-- Data Custodian -->
+    <rect x="530" y="540" width="300" height="100" class="box it"/>
+    <text x="670" y="570" text-anchor="middle" class="title">🕵🏻⚙️ Datenhalter (Data Custodian)</text>
+    <text x="670" y="590" text-anchor="middle" class="text">Technische Umsetzung</text>
+    <text x="670" y="610" text-anchor="middle" class="text">Systeme • Datenhaltung</text>
+
+    <!-- Owner → DGC -->
+    <line x1="260" y1="540" x2="260" y2="460" class="arrow"/>
+    <text x="180" y="500" class="label">
+        <tspan x="120" dy="0">Keine Einigung über</tspan>
+        <tspan x="120" dy="14">Bereiche hinweg</tspan>
+    </text>
+
+    <!-- Custodian → DGC -->
+    <line x1="670" y1="540" x2="670" y2="460" class="arrow"/>
+    <text x="690" y="500" class="label">
+        <tspan x="690" dy="0">Keine Einigung bzgl.</tspan>
+        <tspan x="690" dy="14">technischer Umsetzung</tspan>
+    </text>
+
+    <!-- DGC (breit) -->
+    <rect x="190" y="360" width="540" height="100" class="box neutral"/>
+    <text x="460" y="395" text-anchor="middle" class="title">Gremium Datengouvernanz (GDG) 👥🧭 / ACB</text>
+    <text x="460" y="415" text-anchor="middle" class="text">Koordination zwischen Bereichen</text>
+    <text x="460" y="435" text-anchor="middle" class="text">Standards • Priorisierung • Konfliktlösung</text>
+
+    <!-- DGC → Direktion -->
+    <line x1="460" y1="360" x2="460" y2="240" class="arrow"/>
+    <text x="530" y="270" text-anchor="middle" class="label">Struktureller Konflikt</text>
+
+
+    <!-- Direktion / GL als Dach-Dreieck -->
+    <polygon points="100,240 820,240 460,120" class="gl"/>
+    <polygon points="100,240 820,240 460,120" class="line"/>
+    <text x="460" y="200" text-anchor="middle" class="title">Direktion (GL)</text>
+    <text x="460" y="220" text-anchor="middle" class="text">Ownership • Silos • Prioritäten</text>
+
+</svg>
