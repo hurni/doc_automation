@@ -29,7 +29,7 @@
     <text x="100" y="330" class="title">Fach</text>
 
     <!-- Container IT -->
-    <rect x="480" y="300" width="345" height="580" class="box it-bg"/>
+    <rect x="480" y="300" width="360" height="580" class="box it-bg"/>
     <text x="500" y="330" class="title">FBDD</text>
 
     <!-- Data User -->
@@ -75,20 +75,15 @@
     </text>
 
     <!-- Data Custodian -->
-    <rect x="500" y="540" width="300" height="100" class="box it"/>
-    <text x="640" y="570" text-anchor="middle" class="title">🕵🏻⚙️ BI</text>
-    <text x="640" y="590" text-anchor="middle" class="text">Systeme</text>
-    <text x="640" y="610" text-anchor="middle" class="text">Datenhaltung</text>
+    <rect x="530" y="540" width="300" height="100" class="box it"/>
+    <text x="590" y="570" text-anchor="middle" class="title">🕵🏻⚙️ BI</text>
+    <text x="590" y="590" text-anchor="middle" class="text">Systeme</text>
+    <text x="590" y="610" text-anchor="middle" class="text">Datenhaltung</text>
 
     <!-- Externer Lieferant -->
-    <rect x="850" y="540" width="200" height="100" class="box business"/>
-    <text x="950" y="570" text-anchor="middle" class="title">🕵🏻⚙️ Banian</text>
-    <text x="950" y="590" text-anchor="middle" class="text">Technische Umsetzung</text>
-
-    <!-- BI → Banian -->
-    <line x1="800" y1="580" x2="850" y2="580" class="arrow"/>
-    <line x1="850" y1="600" x2="800" y2="600" class="arrow"/>
-
+    <rect x="670" y="550" width="140" height="80" class="box business"/>
+    <text x="740" y="580" text-anchor="middle" class="title">🕵🏻⚙️ Banian</text>
+    <text x="740" y="600" text-anchor="middle" class="text">Umsetzung</text>
 
     <!-- Owner → DGC -->
     <line x1="260" y1="540" x2="260" y2="460" class="arrow"/>

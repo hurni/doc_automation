@@ -8,6 +8,10 @@ terms:
       - dataSteward
       - dataOwner
 
+  dataGovernance:
+    mantra1: 👉 Keine Rolle funktioniert isoliert – Data Governance ist Zusammenarbeit.
+    mantra2: 👉 Aufgaben und Kompetenzen können delegiert werden, nicht aber Verantwortung.
+
   validation:
     label: Validierung
     description: Prüfung, ob die Bedeutung gemäss fachlicher Termini (Glossar) oder ob die definiterten Qualitätstandards (fit-for-purpuse) eingehalten wurden.
@@ -19,8 +23,9 @@ terms:
 
   dataOwner:
     label: 🧑‍✈️🧭 Dateneigner (Data Owner)
-    slogan: Der 🧑‍✈️🧭 Dateneigner (Data Owner) trägt die accountability – auch wenn er nicht operativ arbeitet.
-    description: Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitung und trägt die Gesamtaccountability für die Daten seines Bereichs. Er entscheidet, wofür Daten genutzt werden dürfen, wie wichtig sie sind und welche Risiken akzeptiert werden.
+    perspective: Führungsverantwortung tragen.
+    slogan: Der 🧑‍✈️🧭 Dateneigner (Data Owner) trägt die Verantwortung – auch wenn er nicht operativ arbeitet.
+    description: Der 🧑‍✈️🧭 Dateneigner (Data Owner) ist Mitglied der Geschäftsleitung und trägt die Gesamtverantwortung für die Daten seines Bereichs. Er entscheidet, wofür Daten genutzt werden dürfen, wie wichtig sie sind und welche Risiken akzeptiert werden.
     alias_en: Data Owner
     alias_de: 🧑‍✈️🧭 Dateneigner
     related:
@@ -40,11 +45,12 @@ terms:
     - Rechtliche Compliance sicherstellen (z. B. Datenschutz, Fachgesetze)
     - description Schutzbedarf und Risikomitigierung der Daten
     - Sicherstellen, dass Daten zur Zielerreichung des BLW beitragen
-    focus: Führungsaccountability tragen
+    focus: Verantwortung & Steuerung
     expertise: Strategisch
 
   dataCustodian:
     label: 🕵🏻⚙️ Datenhalter (Data Custodian)
+    perspective: Technische Expertise einbringen.
     description: Der 🕵🏻⚙️ Datenhalter (Data Custodian) ist im nnformatiknahen Bereich angesiedelt und stellt sicher, dass Daten technisch verfügbar, sicher und performant sind. Wo die 🕵🏻⚙️ Datenhalter (Data Custodian) angesiedelt sind, hängt von den jeweiligen Daten ab. Diese können im Amt, in der Bundesverwaltung, bei den Kantonen oder auch bei privaten Anbietern gehalten werden.
     slogan: Der 🕵🏻⚙️ Datenhalter (Data Custodian) sorgt dafür, dass Daten sicher und zuverlässig gespeichert und extrahiert werden.
     alias_en: Data Custodian
@@ -72,11 +78,12 @@ terms:
     - Integrität
     - Sicherheit (Confidentiality)
     - Nachvollziehbarkeit (Logging, Traceability)
-    focus: Technische Expertise einbringen.
+    focus: Infrastruktur, Provision & Sicherheit.
     expertise: Teschnisch
 
   dataSteward:
     label: 👩‍💼💡 Datenverwalter (Data Steward)
+    perspective: Fachanforderungen sicherstellen.
     description: Der 👩‍💼💡 Datenverwalter (Data Steward) ist im Fachbereich angesiedelt und stellt sicher, dass Daten verständlich, korrekt und nutzbar sind. Er ist die zentrale Drehscheibe zwischen Fach, IT und Governance.
     slogan: Der 👩‍💼💡 Datenverwalter (Data Steward) sorgt dafür, dass Daten richtig verstanden und richtig genutzt werden.
     alias_en: Data Steward
@@ -103,7 +110,7 @@ terms:
       - Dokumentation & Transparenz
       - Semantische Klarheit (einheitliche Begriffe)
       - Einhaltung der Governance im Alltag
-    focus: Fachanforderungen sicherstellen.
+    focus: Qualität, Nutzung & Interpretation.
     expertise: Fachlich
 
  
@@ -167,11 +174,9 @@ terms:
   dataUser:
     label: Data User 👤⁉️
     description: Ein Data User ⁉️  will Daten des BLW für eine Projekte verwenden. Der Data User 👤⁉️  kann innerhalb oder ausserhalb des BLW arbeiten. Er/sie kann die Daten aber auch für private Projekte verwenden wollen. 
-    responsibility: Keine
+    responsibility: Eigene Auswertungen nach besten Wissen und Gewissen erstellen. 
     authority: 
     - Daten verwenden oder nicht?
     - Spezifische Anforderungen an den  👩‍💼💡 Datenverwalter (Data Steward) melden.
     - Antrag für die Veröffentlichung zusätzlicher Daten gemäss EMBAG sicherstellen.
-    accountability:
-    - Eigene Auswertungen nach besten Wissen und Gewissen erstellen. 
-    - Publikationsrichtlinien (Zitierung!) umsetzen.
+    accountability: Publikationsrichtlinien (Zitierung!) umsetzen.
